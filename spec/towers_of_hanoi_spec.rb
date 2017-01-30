@@ -2,10 +2,6 @@ describe TowersOfHanoi, '#create' do
 
   game = TowersOfHanoi.new
 
-  it 'can create a game' do
-    expect(game).not_to be_nil
-  end
-
   it 'has 3 discs on the first tower by default' do
     expect(game.numberOfDiscsOnTower 1).to eq(3)
   end
