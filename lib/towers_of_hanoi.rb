@@ -1,17 +1,11 @@
 class TowersOfHanoi
 
   def initialize(number_of_discs = 3)
-    @number_of_discs = number_of_discs
+    @number_of_discs = [nil, number_of_discs, 0, 0]
   end
 
   def numberOfDiscsOnTower(tower_number)
-    if tower_number == 3 then
-      0
-    elsif tower_number == 2 then
-      @number_if_discs_on_tower_2 || 0
-    elsif tower_number == 1
-      @number_of_discs
-    end
+    @number_of_discs[tower_number]
   end
 
   def topDiscOnTower(tower_number)
@@ -23,8 +17,8 @@ class TowersOfHanoi
   end
 
   def move(from, to)
-    @number_of_discs -= 1
-    @number_if_discs_on_tower_2 = 1
+    @number_of_discs[from] -= 1
+    @number_of_discs[to] += 1
     @size_of_disc_on_tower_1 = 2
     @size_of_disc_on_tower_2 = 1
   end
