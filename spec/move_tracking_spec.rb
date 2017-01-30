@@ -9,6 +9,10 @@ describe TowersOfHanoi, '#move' do
       expect(game.numberOfDiscsOnTower 1).to eq(2)
     end
 
+    it 'there is now 1 disc on the second tower' do
+      expect(game.numberOfDiscsOnTower 2).to eq(1)
+    end
+
   end
 
 end
