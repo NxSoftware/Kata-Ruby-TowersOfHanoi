@@ -1,7 +1,11 @@
 class TowersOfHanoi
 
   def numberOfDiscsOnTower(tower_number)
-    tower_number == 1 ? 3 : 0
+    if tower_number == 2 or tower_number == 3 then
+      0
+    else
+      3
+    end
   end
 
 end
