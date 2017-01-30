@@ -10,4 +10,9 @@ describe TowersOfHanoi, '#create' do
     expect(game.numberOfDiscsOnTower 1).to eq(3)
   end
 
+  it 'has 0 discs on the second tower by default' do
+    game = TowersOfHanoi.new
+    expect(game.numberOfDiscsOnTower 2).to eq(0)
+  end
+
 end
