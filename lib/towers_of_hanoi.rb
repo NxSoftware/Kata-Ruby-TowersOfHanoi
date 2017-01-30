@@ -13,7 +13,9 @@ class TowersOfHanoi
   end
 
   def topDiscOnTower(tower_number)
-    1
+    if tower_number == 1 then
+      1
+    end
   end
 
 end

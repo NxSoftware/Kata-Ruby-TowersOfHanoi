@@ -31,4 +31,9 @@ describe TowersOfHanoi, '#create' do
     expect(game.topDiscOnTower 1).to eq(1)
   end
 
+  it 'the size of the top-most discs on the second and towers are nil (no discs)' do
+    expect(game.topDiscOnTower 2).to be_nil
+    expect(game.topDiscOnTower 3).to be_nil
+  end
+
 end
