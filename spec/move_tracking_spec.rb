@@ -20,6 +20,10 @@ describe TowersOfHanoi, '#move' do
       expect(game.topDiscOnTower 1).to eq(2)
     end
 
+    it 'the size of the top disc on the second tower is now 1' do
+      expect(game.topDiscOnTower 2).to eq(1)
+    end
+
   end
 
 end
