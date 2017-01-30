@@ -1,8 +1,7 @@
 describe TowersOfHanoi, '#move' do
 
-  game = TowersOfHanoi.new
-
   describe 'when the top disc (1) is moved from the first tower to the second tower' do
+    game = TowersOfHanoi.new
     game.move(1, 2)
 
     it 'there are now 2 discs on the first tower' do
@@ -15,6 +14,10 @@ describe TowersOfHanoi, '#move' do
 
     it 'there are still no discs on the third tower' do
       expect(game.numberOfDiscsOnTower 3).to eq(0)
+    end
+
+    it 'the size of the top disc on the first tower is now 2' do
+      expect(game.topDiscOnTower 1).to eq(2)
     end
 
   end

@@ -16,13 +16,14 @@ class TowersOfHanoi
 
   def topDiscOnTower(tower_number)
     if tower_number == 1 then
-      1
+      @size_of_disc || 1
     end
   end
 
   def move(from, to)
     @number_of_discs -= 1
     @number_if_discs_on_tower_2 = 1
+    @size_of_disc = (@size_of_disc || 1) + 1
   end
 
 end
