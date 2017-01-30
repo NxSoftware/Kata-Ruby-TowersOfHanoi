@@ -12,4 +12,8 @@ class TowersOfHanoi
     end
   end
 
+  def topDiscOnTower(tower_number)
+    1
+  end
+
 end

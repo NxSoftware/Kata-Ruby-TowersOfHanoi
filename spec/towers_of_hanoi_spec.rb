@@ -27,4 +27,8 @@ describe TowersOfHanoi, '#create' do
     end
   end
 
+  it 'the size of the top-most disc on the first tower is 1' do
+    expect(game.topDiscOnTower 1).to eq(1)
+  end
+
 end
