@@ -6,11 +6,8 @@ describe TowersOfHanoi, '#create' do
     expect(game.numberOfDiscsOnTower 1).to eq(3)
   end
 
-  it 'has 0 discs on the second tower by default' do
+  it 'has 0 discs on the second and third towers by default' do
     expect(game.numberOfDiscsOnTower 2).to eq(0)
-  end
-
-  it 'has 0 discs on the third tower by default' do
     expect(game.numberOfDiscsOnTower 3).to eq(0)
   end
 
