@@ -24,6 +24,10 @@ describe TowersOfHanoi, '#move' do
       expect(game.topDiscOnTower 2).to eq(1)
     end
 
+    it 'the size of the top-most disc on the third tower is nil (no discs)' do
+      expect(game.topDiscOnTower 3).to be_nil
+    end
+
   end
 
 end
