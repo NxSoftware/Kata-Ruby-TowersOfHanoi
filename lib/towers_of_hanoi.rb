@@ -5,7 +5,9 @@ class TowersOfHanoi
   end
 
   def numberOfDiscsOnTower(tower_number)
-    if tower_number == 2 or tower_number == 3 then
+    if tower_number == 3 then
+      0
+    elsif tower_number == 2 then
       @number_if_discs_on_tower_2 || 0
     elsif tower_number == 1
       @number_of_discs

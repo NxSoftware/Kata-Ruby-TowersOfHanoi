@@ -13,6 +13,10 @@ describe TowersOfHanoi, '#move' do
       expect(game.numberOfDiscsOnTower 2).to eq(1)
     end
 
+    it 'there are still no discs on the third tower' do
+      expect(game.numberOfDiscsOnTower 3).to eq(0)
+    end
+
   end
 
 end
