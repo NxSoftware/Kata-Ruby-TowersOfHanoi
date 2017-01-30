@@ -18,4 +18,8 @@ class TowersOfHanoi
     end
   end
 
+  def move(from, to)
+    @number_of_discs -= 1
+  end
+
 end
