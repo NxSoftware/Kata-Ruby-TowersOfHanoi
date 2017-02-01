@@ -23,4 +23,8 @@ class TowersOfHanoi
     @towers[to].push @towers[from].pop
   end
 
+  def can_move(from, to)
+    true
+  end
+
 end
