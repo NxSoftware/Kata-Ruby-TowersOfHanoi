@@ -24,7 +24,17 @@ class TowersOfHanoi
   end
 
   def can_move(from, to)
-    true
+    from_tower = tower(from)
+    to_tower = tower(to)
+
+    return false unless from_tower and to_tower
+
+    from_disc = from_tower.last
+    to_disc = to_tower.last
+
+    return true if to_disc == nil
+
+    from_tower.last < to_tower.last
   end
 
 end
