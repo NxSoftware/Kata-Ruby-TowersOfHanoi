@@ -1,63 +1,28 @@
+def expectMove(from, to, expected_tower_1, expected_tower_2, expected_tower_3)
+  game = TowersOfHanoi.new
+  game.move(from, to)
+
+  it 'the towers have the expected discs' do
+    expect(game.tower(1)).to match(expected_tower_1)
+    expect(game.tower(2)).to match(expected_tower_2)
+    expect(game.tower(3)).to match(expected_tower_3)
+  end
+end
+
 describe TowersOfHanoi, '#move' do
 
   describe 'when the top disc (1) is moved from the first tower to the second tower' do
-    game = TowersOfHanoi.new
-    game.move(1, 2)
-
-    it 'there are now 2 discs on the first tower' do
-      expect(game.numberOfDiscsOnTower 1).to eq(2)
-    end
-
-    it 'there is now 1 disc on the second tower' do
-      expect(game.numberOfDiscsOnTower 2).to eq(1)
-    end
-
-    it 'there are still no discs on the third tower' do
-      expect(game.numberOfDiscsOnTower 3).to eq(0)
-    end
-
-    it 'the size of the top disc on the first tower is now 2' do
-      expect(game.topDiscOnTower 1).to eq(2)
-    end
-
-    it 'the size of the top disc on the second tower is now 1' do
-      expect(game.topDiscOnTower 2).to eq(1)
-    end
-
-    it 'the size of the top-most disc on the third tower is nil (no discs)' do
-      expect(game.topDiscOnTower 3).to be_nil
-    end
-
+    expected_tower_1 = [3, 2]
+    expected_tower_2 = [1]
+    expected_tower_3 = []
+    expectMove(1, 2, expected_tower_1, expected_tower_2, expected_tower_3)
   end
 
   describe 'when the top disc (1) is moved from the first tower to the third tower' do
-    game = TowersOfHanoi.new
-    game.move(1, 3)
-
-    it 'there are now 2 discs on the first tower' do
-      expect(game.numberOfDiscsOnTower 1).to eq(2)
-    end
-
-    it 'there is now 1 disc on the third tower' do
-      expect(game.numberOfDiscsOnTower 3).to eq(1)
-    end
-
-    it 'there are still no discs on the second tower' do
-      expect(game.numberOfDiscsOnTower 2).to eq(0)
-    end
-
-    it 'the size of the top disc on the first tower is now 2' do
-      expect(game.topDiscOnTower 1).to eq(2)
-    end
-
-    it 'the size of the top disc on the third tower is now 1' do
-      expect(game.topDiscOnTower 3).to eq(1)
-    end
-
-    it 'the size of the top-most disc on the second tower is nil (no discs)' do
-      expect(game.topDiscOnTower 2).to be_nil
-    end
-
+    expected_tower_1 = [3, 2]
+    expected_tower_2 = []
+    expected_tower_3 = [1]
+    expectMove(1, 3, expected_tower_1, expected_tower_2, expected_tower_3)
   end
 
 end

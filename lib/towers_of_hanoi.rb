@@ -6,12 +6,17 @@ class TowersOfHanoi
   end
 
   def numberOfDiscsOnTower(tower_number)
-    tower = @towers[tower_number]
-    tower.count if tower
+    t = tower tower_number
+    t.count unless t == nil
   end
 
   def topDiscOnTower(tower_number)
     @towers[tower_number].last
+  end
+
+  def tower(tower_number)
+    t = @towers[tower_number]
+    t.dup unless t == nil
   end
 
   def move(from, to)
