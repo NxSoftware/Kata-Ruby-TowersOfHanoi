@@ -18,6 +18,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require_relative '../lib/towers_of_hanoi.rb'
+require_relative '../lib/renderer.rb'
 require_relative 'helpers.rb'
 
 RSpec.configure do |config|
