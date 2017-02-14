@@ -1,6 +1,9 @@
 class TowersOfHanoi
 
+  attr_reader :number_of_discs
+
   def initialize(number_of_discs = 3)
+    @number_of_discs = number_of_discs
     initial_tower = (1..number_of_discs).to_a.reverse
     @towers = [[], initial_tower, [], []]
   end
