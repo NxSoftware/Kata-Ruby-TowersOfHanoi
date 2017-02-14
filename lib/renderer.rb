@@ -8,6 +8,13 @@ class TowersOfHanoiRenderer
       '  |     |     |  ',
       '-----   -    --- ',
       ]
+    elsif game.numberOfDiscsOnTower(3) == 2
+      [
+      '  |     |     |  ',
+      '  |     |     |  ',
+      '  |     |     -  ',
+      '-----   |    --- ',
+      ]
     elsif game.numberOfDiscsOnTower(2) == 1
       [
       '  |     |     |  ',
